@@ -1,0 +1,30 @@
+<p>test works!</p>
+
+<button (click)="onClick()">Enable</button>
+
+<input type="text" [disabled]="isDisabled" id="{{myId}}" value="Anything Here" />
+
+<!--  -->
+
+<h2 [class]="successClass">Codevolution</h2>
+
+<!-- Single Class -->
+<h2 [class.text-danger]="hasError">CodeEvolution</h2>
+
+<!-- Multiple Classes -->
+<h2 [ngClass]="messageClasses">CodeEvolution</h2>
+
+<!-- <h2 [ngClass]="{'green' : isSet}">wewee</h2> -->
+
+
+
+<!-- Two Way Binding -->
+<input type="text" [(ngModel)]="myVal" />
+{{myVal}}
+
+<!-- Event Binding -->
+<button 
+    (click)="enableDisableRule()" 
+    [ngClass]="{'green' : toggle, 'red': !toggle}">
+    {{status}}
+</button>
